@@ -1,0 +1,21 @@
+<div class="task-list-container">
+  <h2>Task List</h2>
+
+  <!-- Formulaire d'ajout de tâche -->
+  <div class="task-input">
+    <input type="text" [(ngModel)]="newTaskName" placeholder="Add a new task" class="input-task" />
+    <button (click)="addTask()" class="btn btn-add">Add Task</button>
+  </div>
+
+  <ul class="task-list">
+    <li *ngFor="let task of tasks" class="task-item" [class.completed]="task.completed">
+      <input type="checkbox" [(ngModel)]="task.completed" class="checkbox-task"/>
+      <input type="text" [(ngModel)]="task.name" [readonly]="!task.isEditing" class="input-task-name"/>
+      <div class="task-actions">
+        <button (click)="editTask(task)" *ngIf="!task.isEditing" class="btn btn-edit">Edit</button>
+        <button (click)="saveTask(task)" *ngIf="task.isEditing" class="btn btn-save">Save</button>
+        <button (click)="deleteTask(task)" class="btn btn-delete">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

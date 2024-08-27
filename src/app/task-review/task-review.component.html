@@ -1,0 +1,26 @@
+<div class="task-review-container">
+    <h2>Task Summary</h2>
+    
+    <div class="task-summary">
+      <p>Total tasks: <span>{{ tasks.length }}</span></p>
+      <p>Completed tasks: <span>{{ completedTasksCount }}</span></p>
+      <p>Pending tasks: <span>{{ pendingTasksCount }}</span></p>
+    </div>
+  
+    <div class="task-lists">
+      <div class="task-group">
+        <h3>Completed Tasks</h3>
+        <ul class="task-list">
+          <li *ngFor="let task of completedTasks" class="task-item completed">{{ task.name }}</li>
+        </ul>
+      </div>
+  
+      <div class="task-group">
+        <h3>Pending Tasks</h3>
+        <ul class="task-list">
+          <li *ngFor="let task of pendingTasks" class="task-item pending">{{ task.name }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

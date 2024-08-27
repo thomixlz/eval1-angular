@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-review-container {
+    margin-top:25px!important;
+  }
+
+  .task-list-container, .task-review-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Formulaire d'ajout de tâche */
+  .task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input-task {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-add {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-add:hover {
+    background-color: #218838;
+  }
+  
+  /* Liste des tâches */
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .task-item.completed .input-task-name {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .checkbox-task {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .input-task-name {
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    font-size: 16px;
+    background: transparent;
+  }
+  
+  .input-task-name[readonly] {
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-edit:hover {
+    background-color: #0069d9;
+  }
+  
+  .btn-save {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+  
+  .btn-save:hover {
+    background-color: #138496;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  /* Task Summary */
+  .task-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .task-summary p {
+    font-size: 16px;
+  }
+  
+  .task-summary span {
+    font-weight: bold;
+  }
+  
+  .task-group {
+    margin-bottom: 20px;
+  }
